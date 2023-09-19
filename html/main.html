@@ -1,37 +1,245 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        header {
-            width: 1000px;
-            border: 1px solid blue;
+        * {
+            margin: 0;
             box-sizing: border-box;
-            
         }
 
-        
+        p {
+            font-size: 12px;
+        }
+
+        .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+      }
+
+        .container {
+            margin: 0 auto;
+            height: 100%;
+            width: 1000px;
+        }
+
+        header {
+            width: 1000px;
+            height: 100px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid blue;
+            background-image: url(https://cdn.pixabay.com/photo/2021/09/16/08/56/leaves-6629581_640.png);
+            background-repeat: repeat-x;
+            background-size: auto;
+
+        }
+        header>p{
+            line-height: 70px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        main {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        main::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        aside {
+            float: left;
+            width: 200px;
+            height: 100%;
+            border: 1px solid red;
+        }
+
+        aside>nav {
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 500px;
+            width: 170px;
+            border: 1px solid orange;
+            border-radius: 4px;
+        }
+
+        article {
+            height: 100%;
+            width: 100%;
+        }
+
+        section {
+            float: left;
+            width: 730px;
+            height: 100%;
+            margin-left: 35px;
+            padding: 10px;
+            border: 1px solid green;
+        }
+        section>nav.category{
+            margin-bottom: 25px;
+        }
+        section>nav.category>h1{
+            float: left;
+            margin-right: 20px;
+        }        
+        section>nav.category>p.write{
+            font-size: 20px;
+            float: right;
+        }
+
+        section>article>.content {
+            float: left;
+            width: 170px;
+            height: 100%;
+            margin-right: 7px;
+        }
+
+        section>article>.content>img {
+            width: 170px;
+            height: 170px;
+        }
+
+        section>article>.content>.content_title {
+            height: 67px;
+            margin-bottom: 20px;
+        }
+        section>article>.content>.content_date{
+            margin-bottom: 20px;
+        }
+
+        .pagination {
+            float: left;
+            text-align: center;
+            width: 710px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <header></header>
+        <header>
+            <p>Green Blog</p>
+        </header>
         <main>
-            <aside></aside>
-            <article>
-                <section></section>
-            </article>
+            <aside>
+                <nav>
+                    
+                </nav>
+            </aside>
+            <section>
+                <nav class="category">
+                    <h1>경영전략</h1><span>20</span>
+                    <p class="write"><i class="fa-regular fa-pen-to-square"></i></p>
+                </nav>
+                <article>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title ellipsis">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                    <div class="content">
+                        <img src="http://placehold.it/170X170" alt="">
+                        <p class="content_title">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_date">2022.12.30</p>
+                    </div>
+                </article>
+                <div class="pagination">
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                </div>
+            </section>
+
 
         </main>
     </div>
-    
+
 </body>
+
 </html>
