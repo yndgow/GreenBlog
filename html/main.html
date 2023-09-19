@@ -22,7 +22,16 @@
             display: -webkit-box;
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
-      }
+        }
+
+        li{
+            list-style-type: none;
+            
+        }
+        ul{
+            margin-block-start: 0;
+            padding-inline-start: 0;
+        }
 
         .container {
             margin: 0 auto;
@@ -75,7 +84,9 @@
             border: 1px solid orange;
             border-radius: 4px;
         }
-
+        aside>nav>ul>li {
+            line-height: 25px;
+        }
         article {
             height: 100%;
             width: 100%;
@@ -94,7 +105,7 @@
         }
         section>nav.category>h1{
             float: left;
-            margin-right: 20px;
+            margin-right: 10px;
         }        
         section>nav.category>p.write{
             font-size: 20px;
@@ -137,7 +148,15 @@
         <main>
             <aside>
                 <nav>
-                    
+                    <ul>
+                        <li>python</li>
+                        <li>java</li>
+                        <li>ios</li>
+                        <li>소프트웨어 자료</li>
+                        <li>자료구조</li>
+                        <li>리눅스 (3)</li>
+                        <li>경영전략 (20)</li>
+                    </ul>
                 </nav>
             </aside>
             <section>
