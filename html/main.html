@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -16,6 +18,11 @@
             font-size: 12px;
         }
 
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
         .ellipsis {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -24,11 +31,12 @@
             -webkit-box-orient: vertical;
         }
 
-        li{
+        li {
             list-style-type: none;
-            
+
         }
-        ul{
+
+        ul {
             margin-block-start: 0;
             padding-inline-start: 0;
         }
@@ -45,17 +53,52 @@
             margin-top: 15px;
             margin-bottom: 15px;
             padding: 10px;
+            position: relative;
             border: 1px solid blue;
+
+            /* 설정시 변경 */
+            /*
             background-image: url(https://cdn.pixabay.com/photo/2021/09/16/08/56/leaves-6629581_640.png);
             background-repeat: repeat-x;
             background-size: auto;
+            */
 
         }
-        header>p{
+
+        header>p {
             line-height: 70px;
             font-size: 40px;
             font-weight: bold;
+            
+
+            /* 설정시 변경 */
+            border-bottom: 2px solid #BDBDBD;
+
+
         }
+        header>img {
+            position: absolute;
+            cursor: pointer;
+        }
+        header>img.settings {
+            left: 220px;
+            top: 12px;
+            width: 25px;
+        }
+        header>img.instargram {
+            right: 85px;
+            top: 37px;
+            width: 30px;
+            visibility: hidden;
+        }
+        header>img.youtube {
+            right: 41px;
+            top: 35px;
+            width: 35px;
+            visibility: hidden;
+        }
+        
+
         main {
             width: 100%;
             height: 100%;
@@ -79,14 +122,23 @@
             margin: 0 auto;
             margin-top: 10px;
             margin-bottom: 10px;
+            padding: 10px;
             height: 500px;
             width: 170px;
             border: 1px solid orange;
             border-radius: 4px;
         }
+
+        aside>nav>ul{
+            font-size: 14px;
+        }
+        aside>nav>ul>li:first-child{
+            margin-bottom: 12px;
+        }
         aside>nav>ul>li {
             line-height: 25px;
         }
+
         article {
             height: 100%;
             width: 100%;
@@ -100,16 +152,20 @@
             padding: 10px;
             border: 1px solid green;
         }
-        section>nav.category{
+
+        section>nav.category {
             margin-bottom: 25px;
         }
-        section>nav.category>h1{
+
+        section>nav.category>h1 {
             float: left;
             margin-right: 10px;
-        }        
-        section>nav.category>p.write{
+        }
+
+        section>nav.category>p.write {
             font-size: 20px;
             float: right;
+            cursor: pointer;
         }
 
         section>article>.content {
@@ -128,7 +184,8 @@
             height: 67px;
             margin-bottom: 20px;
         }
-        section>article>.content>.content_date{
+
+        section>article>.content>.content_date {
             margin-bottom: 20px;
         }
 
@@ -144,18 +201,22 @@
     <div class="container">
         <header>
             <p>Green Blog</p>
+            <img src="/html/images/icons8-settings-50.png" alt="settings" class="settings">
+            <img src="/html/images/insta.svg" alt="instargram" class="instargram">
+            <img src="/html/images/youtube.svg" alt="youtube" class="youtube">
         </header>
         <main>
             <aside>
                 <nav>
                     <ul>
-                        <li>python</li>
-                        <li>java</li>
-                        <li>ios</li>
-                        <li>소프트웨어 자료</li>
-                        <li>자료구조</li>
-                        <li>리눅스 (3)</li>
-                        <li>경영전략 (20)</li>
+                        <li><a href="">전체보기</a></li>
+                        <li><a href="">python</a></li>
+                        <li><a href="">java</a></li>
+                        <li><a href="">ios</a></li>
+                        <li><a href="">소프트웨어 자료</a></li>
+                        <li><a href="">자료구조</a></li>
+                        <li><a href="">리눅스 (3)</a></li>
+                        <li><a href="">경영전략 (20)</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -167,7 +228,8 @@
                 <article>
                     <div class="content">
                         <img src="http://placehold.it/170X170" alt="">
-                        <p class="content_title ellipsis">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</p>
+                        <p class="content_title ellipsis">팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략팬덤 확보에 성공한
+                            4세대 걸그룹의 차별화 전략</p>
                         <p class="content_date">2022.12.30</p>
                     </div>
                     <div class="content">
@@ -247,11 +309,13 @@
                     </div>
                 </article>
                 <div class="pagination">
+                    <a href="">&lt;이전</a>
                     <a href="">1</a>
                     <a href="">2</a>
                     <a href="">3</a>
                     <a href="">4</a>
                     <a href="">5</a>
+                    <a href="">다음&gt;</a>
                 </div>
             </section>
 
